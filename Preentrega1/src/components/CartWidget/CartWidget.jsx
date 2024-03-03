@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import { FaCartShopping } from "react-icons/fa6";
 
 const CartWidget = () => {
   return (
     <div>
-        <FaCartShopping />
+      <FaCartShopping />
     </div>
-  )
-}
+  );
+};
 
-export default CartWidget
+export default CartWidget;
