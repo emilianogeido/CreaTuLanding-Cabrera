@@ -26,7 +26,7 @@ const Item = ({nombre, precio, img, stock }) => {
   </CardBody>
   <Divider />
   <CardFooter>
-  <ItemCount inventario={stock} initialValue={1} />
+  <ItemCount  initialValue={1} inventario={stock} />
     <ButtonGroup spacing='2'>
       <Button variant='solid' colorScheme='blue'>
         Buy now
