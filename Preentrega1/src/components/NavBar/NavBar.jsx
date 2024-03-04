@@ -17,6 +17,7 @@ import {
   const NavBar = () => {
     return (
       <div className="navbar">
+        <h2>Atenas</h2>
           <img src={swordImage} alt="Sword" style={{ width: '50px', height: 'auto' }} />
         <div className="menu-wrapper">
       

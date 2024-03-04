@@ -1,7 +1,9 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Divider, ButtonGroup, Button, Text } from '@chakra-ui/react'
+import ItemCount from '../itemCount/ItemCount'
+import useCounter from '../../hooks/useCounter'
 
-const Item = ({nombre, precio, img }) => {
+const Item = ({nombre, precio, img, stock }) => {
   return (
     <Card maxW='sm'>
   <CardBody>
@@ -24,6 +26,7 @@ const Item = ({nombre, precio, img }) => {
   </CardBody>
   <Divider />
   <CardFooter>
+  <ItemCount inventario={stock} initialValue={1} />
     <ButtonGroup spacing='2'>
       <Button variant='solid' colorScheme='blue'>
         Buy now
