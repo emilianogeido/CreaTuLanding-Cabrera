@@ -13,12 +13,13 @@ import {
     Button,
   
   } from '@chakra-ui/react'
+import { Link } from 'react-router-dom';
 
   const NavBar = () => {
     return (
       <div className="navbar">
-        <h2>Atenas</h2>
-          <img src={swordImage} alt="Sword" style={{ width: '50px', height: 'auto' }} />
+        
+          <Link to ='/' ><h2>Atenas </h2><img src={swordImage} alt="Sword" style={{ width: '50px', height: '50' }} /></Link>
         <div className="menu-wrapper">
       
           <Menu>
@@ -26,11 +27,11 @@ import {
               Swords
             </MenuButton>
             <MenuList className="menu-list">
-              <MenuItem className="menu-item">European Swords</MenuItem>
-              <MenuItem className="menu-item">Longswords</MenuItem>
-              <MenuItem className="menu-item">Short Swords</MenuItem>
-              <MenuItem className="menu-item">Katana Swords</MenuItem>
-              <MenuItem className="menu-item">Sword Parts</MenuItem>
+              <MenuItem className="menu-item"><Link to ='/categorias/European Swords' >European Swords </Link></MenuItem>
+              <MenuItem className="menu-item"><Link to ='/categorias/Longswords' >Longswords</Link></MenuItem>
+              <MenuItem className="menu-item"><Link to ='/categorias/Short Swords' >Short Swords</Link></MenuItem>
+              <MenuItem className="menu-item"><Link to ='/categorias/Katana Sword' >Katana Swords</Link></MenuItem>
+              <MenuItem className="menu-item"><Link to ='/categorias/Sword Parts' >Sword Parts</Link></MenuItem>
             </MenuList>
           </Menu>
         </div>
