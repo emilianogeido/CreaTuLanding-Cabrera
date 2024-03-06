@@ -11,12 +11,12 @@ export const productos = [
   },
   {
     id: 2,
-    nombre: "Buzo peace among worlds",
+    nombre: "Two Handed Medieval LongSword",
     precio: 13000,
     categoria: "Longswords",
     stock: 5,
     descripcion:
-      "Buzo Unisex 100% Algodón. Cuello Redondo con refuerzo en los cuellos y mangas",
+      "Metal fittings on sword and scabbard, wood core leather wrapped sheath and belt",
     img: "https://cdn11.bigcommerce.com/s-3pn7p1id/images/stencil/608x608/products/540/3200/DSC_4459__41393.1549209550.JPG?c=2",
   },
 ];

@@ -1,8 +1,9 @@
 import React from 'react'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Card,CardBody, CardFooter, Image, Stack, Heading, Button, Text } from '@chakra-ui/react'
+import { Card,CardBody, CardFooter, Image, Stack, Heading, Button, Text, Spinner } from '@chakra-ui/react'
 import { getProductsById } from "../../data/asyncMock";
+import ItemDetail from '../itemDetail/ItemDetail';
 
 
 const ItemDetailContainer = () => {
@@ -25,35 +26,12 @@ const ItemDetailContainer = () => {
 
     
   return (
-    <Card
-  direction={{ base: 'column', sm: 'row' }}
-  overflow='hidden'
-  variant='outline'
->
-  <Image
-    objectFit='cover'
-    maxW={{ base: '100%', sm: '200px' }}
-    src={product.img}
-    alt='Caffe Latte'
-  />
-
-  <Stack>
-    <CardBody>
-      <Heading size='md'>{product.nombre}</Heading>
-
-      <Text py='2'>
-        Caffè latte is a coffee beverage of Italian origin made with espresso
-        and steamed milk.
-      </Text>
-    </CardBody>
-
-    <CardFooter>
-      <Button variant='solid' colorScheme='blue'>
-        Buy Latte
-      </Button>
-    </CardFooter>
-  </Stack>
-</Card>
+    <>
+    {
+        loading ? <Spinner color='orange.500' /> :
+        <ItemDetail {...product}/>
+    }
+    </>
   )
 }
 
