@@ -28,13 +28,12 @@ const Item = ({id, nombre, precio, img, stock }) => {
   </CardBody>
   <Divider />
   <CardFooter>
-  <ItemCount  initialValue={1} inventario={stock} />
     <ButtonGroup spacing='2'>
-      <Button variant='solid' colorScheme='blue'>
+      <Button variant='solid' colorScheme='orange'>
       <Link to = {`/producto/${id}`} >Ver detalle</Link>
         
       </Button>
-      <Button variant='ghost' colorScheme='blue'>
+      <Button variant='ghost' colorScheme='orange'>
         Add to cart
       </Button>
     </ButtonGroup>

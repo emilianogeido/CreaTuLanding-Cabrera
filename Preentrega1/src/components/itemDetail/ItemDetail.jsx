@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Card,CardBody, CardFooter, Image, Stack, Heading, Button, Text, Spinner } from '@chakra-ui/react'
+import ItemCount from '../itemCount/ItemCount'
+import { Link } from 'react-router-dom'
 
-const ItemDetail = ({img, nombre, descripcion}) => {
+const ItemDetail = ({img, nombre, descripcion, stock}) => {
+const [quantity, setQuantity] = useState()
+
+const onAdd = (cantidad) => {
+    setQuantity(cantidad)
+    console.log(`agregaste ${cantidad} productos`)
+}
+
+
   return (
     <Card
   direction={{ base: 'column', sm: 'row' }}
@@ -10,7 +20,7 @@ const ItemDetail = ({img, nombre, descripcion}) => {
 >
   <Image
     objectFit='cover'
-    maxW={{ base: '100%', sm: '200px' }}
+    maxW={{ base: '100%', sm: '400px' }}
     src={img}
   />
 
@@ -23,10 +33,13 @@ const ItemDetail = ({img, nombre, descripcion}) => {
       </Text>
     </CardBody>
 
-    <CardFooter>
-      <Button variant='solid' colorScheme='blue'>
-        Buy Sword
-      </Button>
+    <CardFooter className='cardFooterContainer'>
+        {
+            quantity > 0 ? <Link to={"/cart"}>Ir al carrito</Link> :
+            <ItemCount onAdd={onAdd} initialValue={1} inventario={stock} />
+        }
+    
+      
     </CardFooter>
   </Stack>
 </Card>
