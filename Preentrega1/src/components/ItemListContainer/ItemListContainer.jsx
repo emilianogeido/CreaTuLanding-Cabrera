@@ -3,6 +3,7 @@ import { getProducts, getProductsByCategory } from "../../data/asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { Spinner, Heading } from '@chakra-ui/react'
+import "./ItemListContainer.css"
 
 
 const ItemListConteiner = ({ titulo }) => {
@@ -31,10 +32,10 @@ const ItemListConteiner = ({ titulo }) => {
       
       {
         loading ? <h2><Spinner color='orange.500' /></h2> : 
-        <>
+        <div className="product-container">
         <Heading size='md' color='orange.800' >{titulo}</Heading>
         <ItemList data={products} />
-        </>
+        </div>
       }
       
     </div>
