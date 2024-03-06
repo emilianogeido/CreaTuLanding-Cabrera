@@ -41,11 +41,13 @@ export const getProductsByCategory = (category) => {
 };
 
 export const getProductsById = (id) => {
+  console.log("ID recibido:", id);
   return new Promise((resolve) => {
     const productoFiltrado = productos.find(
       (el) => el.id === parseInt(id)
-    )
+    );
     setTimeout(() => {
+      console.log("Producto filtrado:", productoFiltrado);
       resolve(productoFiltrado);
     }, 2000);
   });
