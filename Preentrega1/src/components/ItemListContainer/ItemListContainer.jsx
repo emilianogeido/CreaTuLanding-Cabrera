@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getProducts, getProductsByCategory } from "../../data/asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { Spinner } from '@chakra-ui/react'
+import { Spinner, Heading } from '@chakra-ui/react'
 
 
 const ItemListConteiner = ({ titulo }) => {
@@ -32,7 +32,7 @@ const ItemListConteiner = ({ titulo }) => {
       {
         loading ? <h2><Spinner color='orange.500' /></h2> : 
         <>
-        <h1>{titulo}</h1>
+        <Heading size='md' color='orange.800' >{titulo}</Heading>
         <ItemList data={products} />
         </>
       }

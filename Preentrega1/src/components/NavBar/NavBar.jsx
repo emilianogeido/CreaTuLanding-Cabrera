@@ -29,9 +29,7 @@ import { Link } from 'react-router-dom';
             <MenuList className="menu-list">
               <MenuItem className="menu-item"><Link to ='/categorias/European Swords' >European Swords </Link></MenuItem>
               <MenuItem className="menu-item"><Link to ='/categorias/Longswords' >Longswords</Link></MenuItem>
-              <MenuItem className="menu-item"><Link to ='/categorias/Short Swords' >Short Swords</Link></MenuItem>
-              <MenuItem className="menu-item"><Link to ='/categorias/Katana Sword' >Katana Swords</Link></MenuItem>
-              <MenuItem className="menu-item"><Link to ='/categorias/Sword Parts' >Sword Parts</Link></MenuItem>
+              <MenuItem className="menu-item"><Link to ='/categorias/Katana Swords' >Katana Swords</Link></MenuItem>
             </MenuList>
           </Menu>
         </div>

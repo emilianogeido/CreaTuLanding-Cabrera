@@ -1,12 +1,12 @@
 export const productos = [
   {
     id: 1,
-    nombre: "Remera Rick",
+    nombre: "Viking Sword",
     precio: 8500,
     categoria: "European Swords",
     stock: 5,
     descripcion:
-      "Las remeras son 100% algodón peinado 24/1 (Premium).No se deforman, ni pierden el color.",
+      "Forged from 1075 spring steel and metal fittings on sword and sheath",
     img: "https://cdn11.bigcommerce.com/s-3pn7p1id/images/stencil/1280x1280/products/509/2664/DSC_8713__04882.1511021416.JPG?c=2?imbypass=on",
   },
   {
@@ -18,6 +18,26 @@ export const productos = [
     descripcion:
       "Metal fittings on sword and scabbard, wood core leather wrapped sheath and belt",
     img: "https://cdn11.bigcommerce.com/s-3pn7p1id/images/stencil/608x608/products/540/3200/DSC_4459__41393.1549209550.JPG?c=2",
+  },
+  {
+    id: 3,
+    nombre: "Italian Arming Sword",
+    precio: 6500,
+    categoria: "European Swords",
+    stock: 5,
+    descripcion:
+      "Through hardened 1075 spring steel blade with peened tang",
+    img: "https://cdn11.bigcommerce.com/s-3pn7p1id/images/stencil/608x608/products/536/3175/DSC_7029__22759.1546012383.JPG?c=2",
+  },
+  {
+    id: 4,
+    nombre: "Katana Model Musashi",
+    precio: 9500,
+    categoria: "Katana Swords",
+    stock: 5,
+    descripcion:
+      "his is the no bo hi (no groove) version of the #12 for those that want a more robust blade",
+    img: "https://cdn11.bigcommerce.com/s-3pn7p1id/images/stencil/608x608/products/623/4392/DSC_8990__28105.1680723356.JPG?c=2",
   },
 ];
 

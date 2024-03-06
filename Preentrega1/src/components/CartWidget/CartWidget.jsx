@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const CartWidget = () => {
   return (
     <div className="cartIcon">
-      <Link to={"/cart"} >
-      <FaCartShopping />
+      <Link to={"/cart"}>
+        <FaCartShopping />
       </Link>
     </div>
   );
