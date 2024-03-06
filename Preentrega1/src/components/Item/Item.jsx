@@ -16,11 +16,6 @@ const Item = ({id, nombre, precio, img, stock }) => {
     />
     <Stack mt='6' spacing='3'>
       <Heading size='md'>{nombre}</Heading>
-      <Text>
-        This sofa is perfect for modern tropical spaces, baroque inspired
-        spaces, earthy toned spaces and for people who love a chic design with a
-        sprinkle of vintage design.
-      </Text>
       <Text color='blue.600' fontSize='2xl'>
         {precio}
       </Text>
@@ -32,9 +27,6 @@ const Item = ({id, nombre, precio, img, stock }) => {
       <Button variant='solid' colorScheme='orange'>
       <Link to = {`/producto/${id}`} >Ver detalle</Link>
         
-      </Button>
-      <Button variant='ghost' colorScheme='orange'>
-        Add to cart
       </Button>
     </ButtonGroup>
   </CardFooter>
