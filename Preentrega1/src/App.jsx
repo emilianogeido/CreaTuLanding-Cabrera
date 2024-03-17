@@ -1,6 +1,6 @@
 import { useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/itemListContainer/ItemListContainer.jsx"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx"
 import "./App.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
