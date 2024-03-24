@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { getProducts, getProductsByCategory } from "../../data/asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { Spinner, Heading } from '@chakra-ui/react'
 import "./ItemListContainer.css"
+import  CartContext  from "../../context/CartContext";
+
+
+
 
 
 const ItemListConteiner = ({ titulo }) => {
@@ -11,6 +15,8 @@ const ItemListConteiner = ({ titulo }) => {
   const [loading, setLoading] = useState(true);
   const {categoryID} = useParams()
   console.log(categoryID)
+
+  const {cart} = useContext(CartContext)
 
   useEffect(() => {
     setLoading(true)
