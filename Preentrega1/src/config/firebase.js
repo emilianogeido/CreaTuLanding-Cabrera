@@ -14,18 +14,19 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APPID,
 };
 
+
+console.log('se conecta fire')
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
-console.log(1)
 
- productos.forEach((prod) => {
-   addDoc(collection(db, "productos"), prod)
-     .then((el) => {
-       console.log(`se agregó el producto ${el.id}`);
-    })
-     .catch((error) => console.log(error));
- });
-
+productos.forEach((prod) => {
+  addDoc(collection(db, "productos"), prod)
+    .then((el) => {
+      console.log(`se agregó el producto ${el.id}`);
+   })
+    .catch((error) => console.log(error));
+});
 

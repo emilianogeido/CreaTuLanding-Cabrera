@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { getProducts, getProductsByCategory } from "../../data/asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { Spinner, Heading } from '@chakra-ui/react'
@@ -22,6 +21,7 @@ const ItemListConteiner = ({ titulo }) => {
       collection(db, 'productos') :
       query(collection(db, 'productos'), where('categoria', '==' , categoryID ))
       const response = await getDocs(queryRef)
+      console.log(response)
       const products = response.docs.map((doc) => {
         const newProduct = {
           ...doc.data(),
@@ -50,6 +50,8 @@ const ItemListConteiner = ({ titulo }) => {
       }
       
     </div>
+
+    
   )
 }
 
