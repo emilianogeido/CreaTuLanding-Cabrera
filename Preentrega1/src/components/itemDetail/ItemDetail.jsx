@@ -33,7 +33,7 @@ const ItemDetail = ({ nombre, descripcion, img, stock, id, precio }) => {
 >
   <Image
     objectFit='cover'
-    maxW={{ base: '100%', sm: '200px' }}
+    maxW={{ base: '100%', sm: '400px' }}
     src={img}
   />
 

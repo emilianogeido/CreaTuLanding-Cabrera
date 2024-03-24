@@ -25,7 +25,7 @@ const Cart = () => {
     
     return(
       <TableContainer>
-      <Table variant='striped' colorScheme='teal'>
+      <Table variant='striped' colorScheme='orange'>
       <Thead>
       <Tr>
       <Th>Nombre</Th>

@@ -6,10 +6,6 @@ import { Spinner, Heading } from '@chakra-ui/react'
 import "./ItemListContainer.css"
 import  CartContext  from "../../context/CartContext";
 
-
-
-
-
 const ItemListConteiner = ({ titulo }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
