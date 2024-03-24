@@ -40,6 +40,7 @@ export const productos = [
     img: "https://cdn11.bigcommerce.com/s-3pn7p1id/images/stencil/608x608/products/623/4392/DSC_8990__28105.1680723356.JPG?c=2",
   },
 ];
+export default productos;
 
 export const getProducts = () => {
   return new Promise((res) => {

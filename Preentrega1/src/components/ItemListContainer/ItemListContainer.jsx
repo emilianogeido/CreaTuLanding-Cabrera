@@ -5,28 +5,37 @@ import { useParams } from "react-router-dom";
 import { Spinner, Heading } from '@chakra-ui/react'
 import "./ItemListContainer.css"
 import  CartContext  from "../../context/CartContext";
+import { db } from '../../config/firebase'
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 const ItemListConteiner = ({ titulo }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const {categoryID} = useParams()
-  console.log(categoryID)
 
   const {cart} = useContext(CartContext)
 
   useEffect(() => {
     setLoading(true)
-   if (categoryID) {
-    getProductsByCategory(categoryID)
-    .then ((el)=> setProducts(el))
-    .catch((err)=> console.log(err))
-    .finally(()=> setLoading(false))
-   }else {
+    const getProducts = async () => {
+      const queryRef = !categoryID ?
+      collection(db, 'productos') :
+      query(collection(db, 'productos'), where('categoria', '==' , categoryID ))
+      const response = await getDocs(queryRef)
+      const products = response.docs.map((doc) => {
+        const newProduct = {
+          ...doc.data(),
+          id: doc.id
+        }
+        return newProduct
+      })
+      setProducts(products)
+      setLoading(false)
+    }
+
     getProducts()
-    .then ((el)=> setProducts(el))
-    .catch((err)=> console.log(err))
-    .finally(()=> setLoading(false))
-   }
+
+
   }, [categoryID]);
 
   return (
