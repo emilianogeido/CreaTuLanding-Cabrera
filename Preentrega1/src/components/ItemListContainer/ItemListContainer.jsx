@@ -21,7 +21,6 @@ const ItemListConteiner = ({ titulo }) => {
       collection(db, 'productos') :
       query(collection(db, 'productos'), where('categoria', '==' , categoryID ))
       const response = await getDocs(queryRef)
-      console.log(response)
       const products = response.docs.map((doc) => {
         const newProduct = {
           ...doc.data(),

@@ -4,8 +4,10 @@ import { useParams } from "react-router-dom";
 import {
   Spinner
 } from "@chakra-ui/react";
-import { getProductsById } from "../../data/asyncMock";
 import ItemDetail from "../itemDetail/ItemDetail";
+import { doc, getDoc } from 'firebase/firestore'
+import { db } from '../../config/firebase'
+import { Box } from '@chakra-ui/react'
 
 const ItemDetailContainer = () => {
   const [product, setProducts] = useState({});
@@ -13,15 +15,20 @@ const ItemDetailContainer = () => {
   const { productID } = useParams();
 
   useEffect(() => {
-    setLoading(true);
+    const getProduct = async() => {
+      const queryRef = doc(db, 'productos', productID)
 
-    getProductsById(productID)
-      .then((el) => setProducts(el))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
+      const response = await getDoc(queryRef)
+      const newProduct = {
+        id: response.id,
+        ...response.data()
+      }
+      setProducts(newProduct)
+      setLoading(false)
+    }
+    getProduct()
   }, []);
-  console.log(productID);
-  console.log(product);
+
 
   return (
     <>
