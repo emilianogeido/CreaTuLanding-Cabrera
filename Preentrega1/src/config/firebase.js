@@ -22,11 +22,4 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
 
-productos.forEach((prod) => {
-  addDoc(collection(db, "productos"), prod)
-    .then((el) => {
-      console.log(`se agregó el producto ${el.id}`);
-   })
-    .catch((error) => console.log(error));
-});
 
