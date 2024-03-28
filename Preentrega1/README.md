@@ -1,6 +1,6 @@
 # Atenas Sword Shop
 
-![image]()
+![image](D:\CoderHouse\CreaTuLanding+Cabrera\Preentrega1\src\components\NavBar\sword-logo.png)
 
 ## Descripción 
 
