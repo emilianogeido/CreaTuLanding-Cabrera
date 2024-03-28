@@ -23,6 +23,10 @@ Github
 -Instalar las dependecias con npm install en la terminal
 -Compilar: npm run dev en la terminal
 
+## Bugs
+
+En caso de que la orden no se guarde en firebase apretar F5 y reintentar
+
 
 
 

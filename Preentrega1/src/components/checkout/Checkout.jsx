@@ -62,8 +62,11 @@ const Checkout = () => {
         const orderId = orderRef.id;
         
         console.log(orderId)
+        alert(`El id de tu compra es${orderId}`)
+        
       } catch (error) {
         console.log(error);
+        alert("Ocurrio un error por favor refresca la pagina e intentalo otra vez para solucionarlo")
       }
     }
   };
@@ -81,6 +84,7 @@ const Checkout = () => {
 
         {!emailMatch && <Text color={"red.500"}>El email no coincide</Text>}
         <Button onClick={getOrder}>Comprar</Button>
+ 
       </form>
     </div>
   );
