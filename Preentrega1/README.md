@@ -1,6 +1,6 @@
 # Atenas Sword Shop
 
-![image](https://banner2.cleanpng.com/20180419/fiq/kisspng-sword-katana-weapon-clip-art-sword-5ad829fb8cb093.4895996915241159635763.jpg)
+![image](https://as2.ftcdn.net/v2/jpg/02/38/91/73/1000_F_238917340_Vpg7ea2JyZXMjWs7Z8uoYwntHzmLYDIu.jpg)
 
 ## Descripción 
 
