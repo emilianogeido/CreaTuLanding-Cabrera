@@ -18,7 +18,6 @@ import { MdOutlineDeleteOutline } from "react-icons/md";
 const Cart = () => {
 
   const { cart, getTotal, removeItem, clearCart, decrementarCantidad, incrementarCantidad } = useContext(CartContext)
-  console.log('cart', cart)
 
   if(cart.length > 0 ) {
 
